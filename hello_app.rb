@@ -1,5 +1,8 @@
 require 'sinatra'
 
 get '/' do
-  'hello, world! How is it?'
+  weakDays = ["Monday", "Thuesday", "Thuesday", "Thuesday", 
+  "Friday", "Saturday", "Sunday"]
+  weekday = weakDays[Time.now.wday]
+  "Hello, world! Happy #{weekday}!"
 end
